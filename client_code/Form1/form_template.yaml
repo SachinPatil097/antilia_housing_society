@@ -12,3 +12,8 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components: []
+- name: label_1
+  properties: {text: ANTILIA HOUSING SOCIETY}
+  type: Label
+  layout_properties: {slot: title}
