@@ -9,11 +9,15 @@ import jwt
 import datetime
 from functools import wraps
 import base64
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Constants
-JWT_SECRET = anvil.secrets.get_secret('JWT_SECRET')  # Replace with a secure key
-JWT_ALGORITHM = anvil.secrets.get_secret('JWT_ALGORITHM')
-JWT_EXP_DELTA_SECONDS = int(anvil.secrets.get_secret('JWT_EXP_DELTA_SECONDS')) # 1 hour
+JWT_SECRET = os.getenv('JWT_SECRET')  # Replace with a secure key
+JWT_ALGORITHM = os.getenv('JWT_ALGORITHM')
+JWT_EXP_DELTA_SECONDS = int(os.getenv('JWT_EXP_DELTA_SECONDS')) # 1 hour
 
 # Create a JWT token
 def create_jwt(user):
