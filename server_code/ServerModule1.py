@@ -1,3 +1,4 @@
+import anvil.secrets
 import anvil.users
 import anvil.server
 import anvil.tables as tables
@@ -10,9 +11,9 @@ from functools import wraps
 import base64
 
 # Constants
-JWT_SECRET = 'your_secret_key'  # Replace with a secure key
-JWT_ALGORITHM = 'HS256'
-JWT_EXP_DELTA_SECONDS = 3600  # 1 hour
+JWT_SECRET = anvil.secrets.get_secret('JWT_SECRET')  # Replace with a secure key
+JWT_ALGORITHM = anvil.secrets.get_secret('JWT_ALGORITHM')
+JWT_EXP_DELTA_SECONDS = int(anvil.secrets.get_secret('JWT_EXP_DELTA_SECONDS')) # 1 hour
 
 # Create a JWT token
 def create_jwt(user):

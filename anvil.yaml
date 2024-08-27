@@ -17,6 +17,9 @@ services:
 - source: /runtime/services/anvil/users.yml
   client_config: {allow_signup: true, enable_automatically: true, use_email: true, confirm_email: true}
   server_config: {user_table: users}
+- source: /runtime/services/anvil/secrets.yml
+  client_config: {}
+  server_config: {}
 startup: {type: form, module: user.LoginForm}
 native_deps: null
 db_schema:
@@ -52,3 +55,13 @@ db_schema:
       admin_ui: {order: 8, width: 200}
       type: datetime
     title: users
+secrets:
+  JWT_SECRET:
+    value: {LP6ZEFXL73WPGGBZ: BgZbpsIVph8pbS+jj6boNK3SKJPlZspQhpoTVKCwQiYbryL7A56z9iiVOXRS35GNZ5oc9vHtmDypwipLeqxk4iZzbBBHvZhQi5gRcGklVaK84u+kiXk/uIsl6RKRhrMJrCg5d54/jiTYUiyqu3tFVmTUBV0uox6KjF5P/N0Kq/SQhjlhlYOCNI8XSYZHT3skWBJfbs+R6cs33QYvEaNR}
+    type: secret
+  JWT_ALGORITHM:
+    value: {LP6ZEFXL73WPGGBZ: U1p/WDP0nnHkwehqm2eHfeFIXD34f6nhW4WxLwz+E94SdH7YV8j2BPIwXT6TFEnfOD78sKlSVPBAhd+vhKtAHMYqliZM/STczKSmRvQmTY3GtlT2B6zpAQULzoukqJC3m0+V6Q==}
+    type: secret
+  JWT_EXP_DELTA_SECONDS:
+    value: {LP6ZEFXL73WPGGBZ: Mp9pJmZej8VEi388r+RqJISjqlJt39SRSt/a0+VC4/khyK27CIMR+g+DLNCggT8jt9Bbc/N5+VYO3KhcFWTQMWj6fQbAC1+YHPpfVPi1sBiC5jTvoI+hqjHkF2rDitwKozG3}
+    type: secret

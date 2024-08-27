@@ -5,8 +5,9 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..server_modules import verify_token
 
-
+@verify_token
 class ContactUsForm(ContactUsFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
