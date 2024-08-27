@@ -1,5 +1,6 @@
 from ._anvil_designer import RegistrationFormTemplate
 from anvil import *
+import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -26,6 +27,6 @@ class RegistrationForm(RegistrationFormTemplate):
     result = anvil.server.call('register_user',first_name, last_name, email, password)
     if result['success']:
         alert(result['message'])
-        self.open_form('user.LoginForm')
+        open_form('user.LoginForm')
     else:
         alert(result['message'])
