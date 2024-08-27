@@ -1,13 +1,51 @@
+layout: {type: 'form:user.BaseForm'}
 is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
-components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+components_by_slot:
+  slot_1:
+  - name: column_panel_1
+    properties: {spacing_above: small, spacing_below: small, col_spacing: small, role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {full_width_row: false}
+    components:
+    - name: label_1
+      properties: {align: center, font_size: 28, text: Registration Form}
+      type: Label
+      layout_properties: {grid_position: 'LWMLYE,PXIJQP'}
+    - name: label_2
+      properties: {text: 'First Name : ', italic: false, align: center}
+      type: Label
+      layout_properties: {grid_position: 'RXBPLL,HOSEEO'}
+      data_bindings: []
+    - name: first_name
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'RXBPLL,FXTLQT'}
+    - name: label_3
+      properties: {text: 'Last Name: ', align: center}
+      type: Label
+      layout_properties: {grid_position: 'BZHLEY,ZAOIBX'}
+    - name: last_name
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'BZHLEY,UYKQEB'}
+    - name: label_4
+      properties: {text: 'Email :', align: center}
+      type: Label
+      layout_properties: {grid_position: 'YQUEMG,SFEMUI'}
+    - name: email
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'YQUEMG,EVRUTO'}
+    - name: label_5
+      properties: {text: 'Password :', align: center}
+      type: Label
+      layout_properties: {grid_position: 'NSPMYR,FZVLZF'}
+    - name: password
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'NSPMYR,BVOQSC'}
+    - name: submit_registration
+      properties: {text: Submit, role: filled-button, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'HPKCIS,COBLDA'}
+      event_bindings: {click: submit_registration_click}

@@ -15,3 +15,9 @@ components:
   properties: {text: ANTILIA HOUSING SOCIETY}
   type: Label
   layout_properties: {slot: title}
+slots:
+  main_slot:
+    index: 0
+    set_layout_properties: {grid_position: 'DISBPZ,WAHCHR'}
+    target: {type: container, name: content_panel}
+layout_metadata: {title: BaseForm, description: For registration and login}

@@ -4,13 +4,15 @@ name: Antilia housing society
 startup_form: null
 renamed: true
 runtime_options:
-  version: 2
+  version: 3
   client_version: '3'
   server_version: python3-sandbox
   server_spec: {base: python310-standard}
+  legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: user.RegistrationForm}
+startup: {type: form, module: user.LoginForm}
+native_deps: null
