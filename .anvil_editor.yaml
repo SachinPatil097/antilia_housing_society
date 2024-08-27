@@ -1,7 +1,12 @@
 unique_ids:
   forms:
     Form1: 2YSUYQ7ZIYMDBU2UNVLUJNPSOPFJWNIA
-  modules: {}
+    Form2: '1724734414565792584102566.7498'
+    user.BaseForm: '1724734418730900899462147.6836'
+    user.LoginForm: '1724734909256304908690494.3521'
+    user.RegistrationForm: '1724734623072364626598106.474'
+  modules:
+    user: '172473302358685866479999.96266'
   server_modules: {}
   assets:
     standard-page.html: 4YJVGO2DMYXJN77MFAG2P63W46ODLZ4Q
